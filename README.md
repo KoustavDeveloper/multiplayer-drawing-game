@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# 🎨 DrawTogether
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Node.js](https://img.shields.io/badge/node-%3E%3D%2014.0.0-brightgreen)
+![Socket.IO](https://img.shields.io/badge/socket.io-v4.x-yellow)
+![Express](https://img.shields.io/badge/express-v4.x-purple)
 
-## Available Scripts
+DrawTogether is a real-time collaborative drawing application that allows multiple users to create artwork simultaneously in shared rooms. With a rich set of drawing tools and a built-in chat system, it's perfect for remote collaboration, online teaching, and creative brainstorming sessions.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+### 🎯 Core Features
+- Real-time collaborative drawing
+- Multiple drawing tools (Pencil, Line, Rectangle, Circle, Eraser)
+- Color picker and brush size adjustment
+- Built-in chat system
+- Room-based collaboration
+- Canvas clearing and state persistence
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🛠️ Drawing Tools
+- ✏️ Pencil: Free-hand drawing
+- 📏 Line: Straight line tool
+- ⬜ Rectangle: Draw rectangles
+- ⭕ Circle: Draw circles
+- 🧹 Eraser: Erase parts of the drawing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 💬 Communication
+- Real-time chat system
+- User presence indicators
+- Room-based messaging
+- Chat history preservation
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
+```bash
+git clone https://github.com/KoustavDeveloper/multiplayer-drawing-game.git
+cd multiplayer-drawing-game
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the server
+```bash
+node server.js
+```
 
-### `npm run eject`
+4. Open your browser and navigate to:
+```
+http://localhost:3000
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🏗️ Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+drawtogether/
+├── public/
+│   └── index.html
+├── server.js
+├── package.json
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔧 Configuration
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application can be configured through environment variables:
 
-## Learn More
+```env
+PORT=3000              # Server port (default: 3000)
+MAX_USERS=10          # Maximum users per room (default: 10)
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌟 Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Creating a Room**
+   - Open the application
+   - A new room will be automatically created
+   - Share the room URL with others to collaborate
 
-### Code Splitting
+2. **Drawing Tools**
+   - Select a tool from the toolbar
+   - Choose a color using the color picker
+   - Adjust brush size using the slider
+   - Start drawing on the canvas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Chat System**
+   - Type your message in the chat input
+   - Press Enter or click Send to share your message
+   - Chat history is preserved for the duration of the room
 
-### Analyzing the Bundle Size
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We welcome contributions! Here's how you can help:
 
-### Making a Progressive Web App
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📝 License
 
-### Advanced Configuration
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔮 Future Enhancements
 
-### Deployment
+- [ ] User authentication system
+- [ ] Drawing replay functionality
+- [ ] Custom room settings
+- [ ] File sharing capabilities
+- [ ] Canvas recording and playback
+- [ ] Additional drawing tools
+- [ ] Mobile responsiveness improvements
+- [ ] Drawing templates and stickers
+- [ ] Room permissions and moderation tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🎯 Technical Details
 
-### `npm run build` fails to minify
+### Built With
+- Node.js - Server runtime
+- Express - Web framework
+- Socket.IO - Real-time communication
+- HTML5 Canvas - Drawing functionality
+- UUID - Unique room identification
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Performance Considerations
+- Drawing data is optimized for real-time transmission
+- Canvas state is preserved for new users joining
+- Efficient room and user management
+- Automatic cleanup of inactive rooms and disconnected users
+
+
+## 🙏 Acknowledgments
+
+- Inspired by collaborative drawing tools
+- Socket.IO team for the amazing real-time engine
+- The open-source community for various tools and libraries
+
+---
+Made with ❤️ by [Koustav Singh](https://github.com/KoustavDeveloper/)
